@@ -1,0 +1,113 @@
+.wcl-blog {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.wcl-posts-grid {
+    width: 100%;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.wcl-post-item {
+    margin-block-start: 0;
+    margin-block-end: 10px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: calc(25% - 12px);
+
+    @media screen and (max-width: 1280px) {
+        width: calc(33% - 10px);
+    }
+
+    @media screen and (max-width: 840px) {
+        width: calc(50% - 10px);
+    }
+
+    @media screen and (max-width: 500px) {
+        width: 100%;
+    }
+}
+
+.wcl-post-thumb {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        transition: all 0.3s ease-in-out;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            & img {
+                transform: scale(1.05);
+            }
+            .wcl-post-overlay {
+                background: rgba(0,0,0,0.7);
+            }
+            .wcl-post-title {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.wcl-post-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.wcl-post-title {
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    padding: 0 10px;
+    transform: scale(0.5);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.wcl-button {
+    display: inline-block;
+    background-color: #006083;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: #0081b0;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+.wcl-header {
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center
+    }
+
+    &__logo {
+    }
+
+    &__menu {
+    }
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+
+    &__icon {
+    }
+
+    &__body {
+    }
+
+    &__list {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .menu-item {
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+}
+
+.icon-menu {
+    display: none;
+}
