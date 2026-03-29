@@ -7,6 +7,7 @@ $cats = get_categories();
 
 <main class="wcl-page-content">
     <div class="wcl-blog wcl-container">
+
         <div class="wcl-posts-filter">
             <button class="wcl-filter-btn wcl-button active" data-category="">All</button>
             <?php foreach ($cats as $c): ?>

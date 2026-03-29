@@ -4,12 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const filterBtns = document.querySelectorAll('.wcl-filter-btn');
 
     if (!grid || !loadMoreBtn) {
-        console.warn('Required elements missing');
         return;
     }
 
     if (typeof config === 'undefined') {
-        console.error('config not found');
         return;
     }
 
